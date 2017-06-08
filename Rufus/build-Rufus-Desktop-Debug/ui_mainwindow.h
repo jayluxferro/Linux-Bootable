@@ -36,7 +36,7 @@ public:
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QLabel *label;
-    QComboBox *comboBox;
+    QComboBox *listDrives;
     QLabel *label_2;
     QComboBox *comboBox_2;
     QLabel *label_3;
@@ -50,7 +50,7 @@ public:
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QCheckBox *checkBox_2;
-    QComboBox *comboBox_5;
+    QComboBox *bootableSelect;
     QPushButton *pushButton;
     QProgressBar *progressBar;
     QLabel *label_6;
@@ -90,9 +90,9 @@ public:
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(10, 10, 71, 20));
-        comboBox = new QComboBox(centralWidget);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(10, 30, 331, 31));
+        listDrives = new QComboBox(centralWidget);
+        listDrives->setObjectName(QString::fromUtf8("listDrives"));
+        listDrives->setGeometry(QRect(10, 30, 331, 31));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(10, 70, 331, 16));
@@ -133,15 +133,15 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         checkBox_2 = new QCheckBox(horizontalLayoutWidget);
         checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
-        checkBox_2->setMaximumSize(QSize(160, 16777215));
+        checkBox_2->setMaximumSize(QSize(120, 16777215));
 
         horizontalLayout->addWidget(checkBox_2);
 
-        comboBox_5 = new QComboBox(horizontalLayoutWidget);
-        comboBox_5->setObjectName(QString::fromUtf8("comboBox_5"));
-        comboBox_5->setMaximumSize(QSize(70, 16777215));
+        bootableSelect = new QComboBox(horizontalLayoutWidget);
+        bootableSelect->setObjectName(QString::fromUtf8("bootableSelect"));
+        bootableSelect->setMaximumSize(QSize(110, 16777215));
 
-        horizontalLayout->addWidget(comboBox_5);
+        horizontalLayout->addWidget(bootableSelect);
 
         pushButton = new QPushButton(horizontalLayoutWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
