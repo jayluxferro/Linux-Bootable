@@ -19,7 +19,7 @@ class UsbDevice;
 const quint64 DEFAULT_UNIT = 1048576;
 
 // Application name used for titles in messageboxes
-const QString ApplicationTitle = "ROSA Image Writer";
+const QString ApplicationTitle = "Rufus | SPERIXLABS";
 
 // Pointer to correctly typed application instance
 #define mApp (static_cast<MainApplication*>qApp)

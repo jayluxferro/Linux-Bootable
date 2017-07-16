@@ -79,6 +79,8 @@ public slots:
     void showSuccessMessage(QString msg);
     // Displays the specified error message and returns to the "idle" mode
     void showErrorMessage(QString msg);
+private slots:
+    void on_writeButton_clicked();
 };
 
 

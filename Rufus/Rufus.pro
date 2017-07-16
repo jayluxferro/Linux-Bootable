@@ -75,7 +75,7 @@ VERSION = 1.0
 #QMAKE_TARGET_COPYRIGHT = "Copyright (c) 2017 SPERIXLABS"
 
 win32 {
-	RC_FILE += RosaImageWriter.rc
+        RC_FILE += rufusresource.qrc
 	CONFIG -= embed_manifest_dll embed_manifest_exe
 	msvc {
 		LIBS += Ole32.lib OleAut32.lib
