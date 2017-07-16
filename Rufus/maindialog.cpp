@@ -41,6 +41,8 @@ MainDialog::MainDialog(QWidget *parent) :
     setWindowFlags((windowFlags() | Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint) & ~Qt::WindowContextHelpButtonHint);
     // Disallow to change the dialog height
     setFixedHeight(size().height());
+    //Disallow maximize
+    this->setFixedSize(this->width(), this->height());
     // Start in the "idle" mode
     hideWritingProgress();
     // Change default open dir

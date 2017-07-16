@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>160</height>
+    <height>175</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -35,8 +35,8 @@
    <string notr="true">Rufus | SPERIXLABS</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="RosaImageWriter.qrc">
-    <normaloff>:/res/icon-rosa.svg</normaloff>:/res/icon-rosa.svg</iconset>
+   <iconset resource="rufusresource.qrc">
+    <normaloff>:/res/icon-rufus.svg</normaloff>:/res/icon-rufus.svg</iconset>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -62,7 +62,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="RosaImageWriter.qrc">:/res/logo-rosa.png</pixmap>
+        <pixmap resource="rufusresource.qrc">:/res/src/logo-rufus.png</pixmap>
        </property>
        <property name="margin">
         <number>0</number>
@@ -144,7 +144,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="RosaImageWriter.qrc">
+        <iconset resource="rufusresource.qrc">
          <normaloff>:/res/icon-open.ico</normaloff>:/res/icon-open.ico</iconset>
        </property>
       </widget>
@@ -158,7 +158,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="RosaImageWriter.qrc">
+        <iconset resource="rufusresource.qrc">
          <normaloff>:/res/icon-refresh.ico</normaloff>:/res/icon-refresh.ico</iconset>
        </property>
       </widget>
@@ -286,7 +286,7 @@
   <tabstop>deviceList</tabstop>
  </tabstops>
  <resources>
-  <include location="RosaImageWriter.qrc"/>
+  <include location="rufusresource.qrc"/>
  </resources>
  <connections>
   <connection>

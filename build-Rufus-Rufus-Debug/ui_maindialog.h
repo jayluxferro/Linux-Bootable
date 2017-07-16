@@ -53,7 +53,7 @@ public:
     {
         if (MainDialog->objectName().isEmpty())
             MainDialog->setObjectName(QStringLiteral("MainDialog"));
-        MainDialog->resize(550, 160);
+        MainDialog->resize(550, 175);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -64,7 +64,7 @@ public:
         MainDialog->setAcceptDrops(true);
         MainDialog->setWindowTitle(QStringLiteral("Rufus | SPERIXLABS"));
         QIcon icon;
-        icon.addFile(QStringLiteral(":/res/icon-rosa.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/res/icon-rufus.svg"), QSize(), QIcon::Normal, QIcon::Off);
         MainDialog->setWindowIcon(icon);
         MainDialog->setSizeGripEnabled(true);
         mainVerticalLayout = new QVBoxLayout(MainDialog);
@@ -83,7 +83,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(logo->sizePolicy().hasHeightForWidth());
         logo->setSizePolicy(sizePolicy1);
-        logo->setPixmap(QPixmap(QString::fromUtf8(":/res/logo-rosa.png")));
+        logo->setPixmap(QPixmap(QString::fromUtf8(":/res/src/logo-rufus.png")));
         logo->setMargin(0);
 
         titleHorizontalLayout->addWidget(logo);

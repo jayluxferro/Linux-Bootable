@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/src/icon-rufus-base-16.png</file>
+        <file>res/src/icon-rufus-base-32.png</file>
+        <file>res/src/logo-rufus.png</file>
+        <file>res/src/USB_flash_drive.svg</file>
+        <file>res/icon-open.ico</file>
+        <file>res/icon-refresh.ico</file>
+        <file>res/icon-rufus.ico</file>
+        <file>res/icon-rufus.svg</file>
+    </qresource>
+</RCC>

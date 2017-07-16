@@ -57,7 +57,7 @@ SOURCES       = ../Rufus/main.cpp \
 		../Rufus/platform_lin.cpp \
 		../Rufus/platform_lin_suprogram.cpp \
 		../Rufus/externalprogressbar_lin.cpp \
-		../Rufus/usbdevicemonitor_lin.cpp qrc_RosaImageWriter.cpp \
+		../Rufus/usbdevicemonitor_lin.cpp qrc_rufusresource.cpp \
 		moc_maindialog.cpp \
 		moc_imagewriter.cpp \
 		moc_physicaldevice.cpp \
@@ -73,7 +73,7 @@ OBJECTS       = main.o \
 		platform_lin_suprogram.o \
 		externalprogressbar_lin.o \
 		usbdevicemonitor_lin.o \
-		qrc_RosaImageWriter.o \
+		qrc_rufusresource.o \
 		moc_maindialog.o \
 		moc_imagewriter.o \
 		moc_physicaldevice.o \
@@ -265,7 +265,7 @@ Makefile: ../Rufus/Rufus.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		../Rufus/Rufus.pro \
-		../Rufus/RosaImageWriter.qrc \
+		../Rufus/rufusresource.qrc \
 		/usr/lib/x86_64-linux-gnu/libQt5Widgets.prl \
 		/usr/lib/x86_64-linux-gnu/libQt5Gui.prl \
 		/usr/lib/x86_64-linux-gnu/libQt5Core.prl
@@ -348,7 +348,7 @@ Makefile: ../Rufus/Rufus.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf:
 ../Rufus/Rufus.pro:
-../Rufus/RosaImageWriter.qrc:
+../Rufus/rufusresource.qrc:
 /usr/lib/x86_64-linux-gnu/libQt5Widgets.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Gui.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Core.prl:
@@ -366,7 +366,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Rufus/RosaImageWriter.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../Rufus/rufusresource.qrc ../Rufus/rufusresource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../Rufus/maindialog.h ../Rufus/imagewriter.h ../Rufus/common.h ../Rufus/platform.h ../Rufus/externalprogressbar.h ../Rufus/physicaldevice.h ../Rufus/usbdevicemonitor.h ../Rufus/usbdevice.h ../Rufus/mainapplication.h ../Rufus/usbdevicemonitor_lin_p.h ../Rufus/platform_lin_suprogram.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../Rufus/main.cpp ../Rufus/maindialog.cpp ../Rufus/imagewriter.cpp ../Rufus/common.cpp ../Rufus/physicaldevice.cpp ../Rufus/mainapplication.cpp ../Rufus/platform_lin.cpp ../Rufus/platform_lin_suprogram.cpp ../Rufus/externalprogressbar_lin.cpp ../Rufus/usbdevicemonitor_lin.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Rufus/maindialog.ui $(DISTDIR)/
@@ -394,16 +394,32 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all: qrc_RosaImageWriter.cpp
+compiler_rcc_make_all: qrc_rufusresource.cpp qrc_rufusresource.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_RosaImageWriter.cpp
-qrc_RosaImageWriter.cpp: ../Rufus/RosaImageWriter.qrc \
+	-$(DEL_FILE) qrc_rufusresource.cpp qrc_rufusresource.cpp
+qrc_rufusresource.cpp: ../Rufus/rufusresource.qrc \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/rcc \
-		../Rufus/res/icon-rosa.svg \
+		../Rufus/res/icon-rufus.svg \
 		../Rufus/res/icon-refresh.ico \
+		../Rufus/res/icon-rufus.ico \
 		../Rufus/res/icon-open.ico \
-		../Rufus/res/logo-rosa.png
-	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name RosaImageWriter ../Rufus/RosaImageWriter.qrc -o qrc_RosaImageWriter.cpp
+		../Rufus/res/src/logo-rufus.png \
+		../Rufus/res/src/icon-rufus-base-16.png \
+		../Rufus/res/src/icon-rufus-base-32.png \
+		../Rufus/res/src/USB_flash_drive.svg
+	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name rufusresource ../Rufus/rufusresource.qrc -o qrc_rufusresource.cpp
+
+qrc_rufusresource.cpp: ../Rufus/rufusresource.qrc \
+		/usr/lib/x86_64-linux-gnu/qt5/bin/rcc \
+		../Rufus/res/icon-rufus.svg \
+		../Rufus/res/icon-refresh.ico \
+		../Rufus/res/icon-rufus.ico \
+		../Rufus/res/icon-open.ico \
+		../Rufus/res/src/logo-rufus.png \
+		../Rufus/res/src/icon-rufus-base-16.png \
+		../Rufus/res/src/icon-rufus-base-32.png \
+		../Rufus/res/src/USB_flash_drive.svg
+	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name rufusresource ../Rufus/rufusresource.qrc -o qrc_rufusresource.cpp
 
 compiler_moc_header_make_all: moc_maindialog.cpp moc_imagewriter.cpp moc_physicaldevice.cpp moc_usbdevicemonitor.cpp moc_usbdevicemonitor_lin_p.cpp
 compiler_moc_header_clean:
@@ -521,8 +537,8 @@ usbdevicemonitor_lin.o: ../Rufus/usbdevicemonitor_lin.cpp ../Rufus/usbdevicemoni
 		../Rufus/usbdevicemonitor_lin_p.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o usbdevicemonitor_lin.o ../Rufus/usbdevicemonitor_lin.cpp
 
-qrc_RosaImageWriter.o: qrc_RosaImageWriter.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_RosaImageWriter.o qrc_RosaImageWriter.cpp
+qrc_rufusresource.o: qrc_rufusresource.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_rufusresource.o qrc_rufusresource.cpp
 
 moc_maindialog.o: moc_maindialog.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_maindialog.o moc_maindialog.cpp
