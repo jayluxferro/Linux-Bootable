@@ -63,8 +63,7 @@ macx {
 FORMS    += maindialog.ui
 
 RESOURCES += \
-    RufusResource.qrc \
-    rufusresource.qrc
+    rufusresource.qrc\
 
 # The following variables can be used for automatic VERSIONINFO generating,
 # but unfortunately it is impossible to use them together with RC_FILE or RES_FILE

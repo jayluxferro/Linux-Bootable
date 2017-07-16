@@ -366,7 +366,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../Rufus/rufusresource.qrc ../Rufus/rufusresource.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../Rufus/rufusresource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../Rufus/maindialog.h ../Rufus/imagewriter.h ../Rufus/common.h ../Rufus/platform.h ../Rufus/externalprogressbar.h ../Rufus/physicaldevice.h ../Rufus/usbdevicemonitor.h ../Rufus/usbdevice.h ../Rufus/mainapplication.h ../Rufus/usbdevicemonitor_lin_p.h ../Rufus/platform_lin_suprogram.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../Rufus/main.cpp ../Rufus/maindialog.cpp ../Rufus/imagewriter.cpp ../Rufus/common.cpp ../Rufus/physicaldevice.cpp ../Rufus/mainapplication.cpp ../Rufus/platform_lin.cpp ../Rufus/platform_lin_suprogram.cpp ../Rufus/externalprogressbar_lin.cpp ../Rufus/usbdevicemonitor_lin.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Rufus/maindialog.ui $(DISTDIR)/
@@ -394,21 +394,9 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all: qrc_rufusresource.cpp qrc_rufusresource.cpp
+compiler_rcc_make_all: qrc_rufusresource.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_rufusresource.cpp qrc_rufusresource.cpp
-qrc_rufusresource.cpp: ../Rufus/rufusresource.qrc \
-		/usr/lib/x86_64-linux-gnu/qt5/bin/rcc \
-		../Rufus/res/icon-rufus.svg \
-		../Rufus/res/icon-refresh.ico \
-		../Rufus/res/icon-rufus.ico \
-		../Rufus/res/icon-open.ico \
-		../Rufus/res/src/logo-rufus.png \
-		../Rufus/res/src/icon-rufus-base-16.png \
-		../Rufus/res/src/icon-rufus-base-32.png \
-		../Rufus/res/src/USB_flash_drive.svg
-	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name rufusresource ../Rufus/rufusresource.qrc -o qrc_rufusresource.cpp
-
+	-$(DEL_FILE) qrc_rufusresource.cpp
 qrc_rufusresource.cpp: ../Rufus/rufusresource.qrc \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/rcc \
 		../Rufus/res/icon-rufus.svg \
