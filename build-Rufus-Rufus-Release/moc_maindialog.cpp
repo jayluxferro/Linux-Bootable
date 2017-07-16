@@ -111,7 +111,6 @@ void MainDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 6: _t->updateProgressBar((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 7: _t->showSuccessMessage((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 8: _t->showErrorMessage((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 9: _t->on_writeButton_clicked(); break;
         default: ;
         }
     }
