@@ -1,10 +1,11 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2013-03-12T16:10:18
+# Project created by QtCreator
 #
 #-------------------------------------------------
 
 QT       += core gui
+QT       += widgets
 
 QTPLUGIN += qsvgicon
 
@@ -12,7 +13,7 @@ QTPLUGIN += qsvgicon
 QT_PLUGINS -= qdds qicns qjp2 qmng qtga qtiff qwbmp qwebp
 
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 5): QT += widgets
 
 TARGET = Rufus
 TEMPLATE = app
@@ -67,11 +68,11 @@ RESOURCES += \
 # The following variables can be used for automatic VERSIONINFO generating,
 # but unfortunately it is impossible to use them together with RC_FILE or RES_FILE
 # which is needed for specifying the executable file icon in Windows.
-VERSION = 2.6.2.0
-#QMAKE_TARGET_COMPANY = ROSA
-#QMAKE_TARGET_PRODUCT = "ROSA Image Writer"
-#QMAKE_TARGET_DESCRIPTION = "Tool for creating bootable ROSA installation USB flash drives"
-#QMAKE_TARGET_COPYRIGHT = "Copyright (c) 2016 ROSA"
+VERSION = 1.0
+#QMAKE_TARGET_COMPANY = SPERIXLABS
+#QMAKE_TARGET_PRODUCT = "Rufus"
+#QMAKE_TARGET_DESCRIPTION = "Tool for creating bootable USB flash drives"
+#QMAKE_TARGET_COPYRIGHT = "Copyright (c) 2017 SPERIXLABS"
 
 win32 {
 	RC_FILE += RosaImageWriter.rc

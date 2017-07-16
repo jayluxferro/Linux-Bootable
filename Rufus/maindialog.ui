@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>155</height>
+    <height>160</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -32,14 +32,11 @@
    <bool>true</bool>
   </property>
   <property name="windowTitle">
-   <string notr="true">ROSA Image Writer</string>
+   <string notr="true">Rufus | SPERIXLABS</string>
   </property>
   <property name="windowIcon">
    <iconset resource="RosaImageWriter.qrc">
     <normaloff>:/res/icon-rosa.svg</normaloff>:/res/icon-rosa.svg</iconset>
-  </property>
-  <property name="windowFlags">
-   <enum>Qt::WindowCloseButtonHint</enum>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
